@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores de Girón</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <main>
-<nav class="navbar navbar--light">
-<div class="navbar__start navbar__start--large">
-  <i class='bx  bx-food-menu'  ></i>  
-</div>
-<div class="navbar__center">
-    Sabores de Girón
-  </div>
-  <ul class="navbar__menu navbar__menu--right">
-    <li class="navbar__item navbar__item--active">
-      <a class="navbar__link" href="#">Inicio</a>
-    </li>
-    <li class="navbar__item">
-      <a class="navbar__link navbar__link--highlighted" href="#">Servicios</a>
-    </li>
-    <li class="navbar__item">
-      <a class="navbar__link" href="#">Contacto</a>
-    </li>
-  </ul>
-</nav>
 
-<div class="card"></div>
-    </main>
+  <main>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar--light">
+      <div class="navbar__start">
+        <i class='bx bx-food-menu'></i>
+      </div>
+
+      <div class="navbar__center">
+        Sabores de Girón
+      </div>
+
+      <ul class="navbar__menu navbar__menu--right">
+        <li class="navbar__item navbar__item--active">
+          <a class="navbar__link" href="#producto">Inicio</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link navbar__link--highlighted" href="#">Servicios</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sección de producto -->
+    <section id="producto" class="producto">
+      <div class="producto__card">
+        <img src="img/arepa.jpg" alt="Arepa Santandereana" class="producto__imagen">
+        <div class="producto__descripcion">
+          <h2 class="producto__titulo">Arepa Santandereana</h2>
+          <p class="producto__texto">Hecha con maíz pelao, rellena de chicharrón crocante y sabor local.</p>
+          <button class="producto__boton">Ver más</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
 </body>
-</html
+</html>
