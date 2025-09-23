@@ -1,0 +1,102 @@
+/* Fondo general del sitio con imagen y transparencia */
+body {
+  margin: 0;
+  padding: 0 auto; /* Centrado horizontal */
+  min-height: 100vh; /* Esto obliga al body a ocupar toda la altura de la pantalla */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a3e2b;
+
+  /* Imagen de fondo */
+  background-image: url('guia-mejores-restaurantes-comer-bien-girona.jpg'); /* Cambia esto por tu imagen */
+  background-size: contain; /* Que la imagen se estire para cubrir todo */
+  background-position: center; /* Centrada para que se vea bien */
+  background-repeat: no-repeat; /* Que no se repita como mosaico */
+
+  /* Capa de color encima con transparencia */
+  background-color: rgba(255, 248, 240, 0.85); /* Color papel con transparencia */
+  background-blend-mode: overlay; /* Mezcla la imagen con el color para suavizarla */
+}
+
+
+/* Estilos generales para la barra de navegación */
+.navbar {
+  display: flex; /* Usamos Flexbox para poner todo en fila: ícono, nombre y menú */
+  justify-content: space-between; /* Empuja el ícono a la izquierda y el menú a la derecha */
+  align-items: center; /* Centra todo verticalmente, para que no se vea chueco */
+  padding: 1rem 2rem; /* Espacio interno para que no se vea apretado */
+  background-color: #fbe8d3; /* Color tipo cremita, da una vibra artesanal */
+  border-radius: 12px; /* Bordes redondeados, se ve más amigable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para que se levante del fondo */
+  font-family: 'Segoe UI', sans-serif; /* Fuente moderna y fácil de leer */
+  position: relative; /* Esto nos ayuda a posicionar el nombre en el centro más adelante */
+}
+
+/*  Versión clara del navbar (por si quieres cambiar el tema después) */
+.navbar--light {
+  background-color: #fbe8d3; /* Mismo color cremita */
+  color: #5a3e2b; /* Marrón suave, como cafecito */
+}
+
+/*  Ícono del menú (el que va a la izquierda) */
+.navbar__start {
+  flex: 0 0 auto; /* No se estira ni se encoge, se queda del tamaño que es */
+  display: flex; /* Usamos Flexbox para centrar el ícono */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+}
+
+.navbar__start i {
+  font-size: 2.4rem; /* Tamaño grande para que se note bien */
+  color: #a0522d; /* Color canela, combina con el estilo del sitio */
+}
+
+/*  Nombre del sitio centrado en la barra */
+.navbar__center {
+  position: absolute; /* Lo sacamos del flujo normal para poder centrarlo */
+  left: 50%; /* Lo mandamos al centro horizontal */
+  transform: translateX(-50%); /* Lo ajustamos para que quede justo en el medio */
+  font-size: 2rem; /* Tamaño grande para que se vea importante */
+  font-weight: bold; /* Negrita para que resalte */
+  color: #a0522d; /* Mismo color canela para mantener coherencia */
+}
+
+/* Menú de navegación (los enlaces de la derecha) */
+.navbar__menu {
+  display: flex; /* Usamos Flexbox para poner los ítems en fila */
+  gap: 1.5rem; /* Espacio entre cada enlace para que no se vean pegados */
+  list-style: none; /* Quitamos los punticos de lista */
+  margin: 0;
+  padding: 0;
+}
+
+/* Alineación del menú a la derecha (por si lo metes en otro contenedor) */
+.navbar__menu--right {
+  justify-content: flex-end;
+}
+
+/* Ítem activo (el que está seleccionado) */
+.navbar__item--active .navbar__link {
+  border-bottom-color: #a0522d; /* Línea debajo en color canela para marcarlo */
+}
+
+/* Estilos para los enlaces del menú */
+.navbar__link {
+  text-decoration: none; /* Quitamos el subrayado clásico */
+  color: #5a3e2b; /* Marrón suave, fácil de leer */
+  font-weight: 500; /* Un poquito más grueso que normal */
+  transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+  border-bottom: 2px solid #d8b08c; /* Línea decorativa debajo del texto */
+  padding-bottom: 4px; /* Espacio entre el texto y la línea */
+}
+
+/* Enlace destacado (como para promociones o cosas importantes) */
+.navbar__link--highlighted {
+  color: #d2691e; /* Naranja tostado, llama la atención */
+  border-bottom-color: #b34700; /* Línea más intensa para resaltar */
+}
+
+/* Efecto al pasar el mouse por encima de los enlaces */
+.navbar__link:hover {
+  color: #b34700; /* Se pone más intenso el color */
+  border-bottom-color: #b34700; /* La línea también se intensifica */
+}
