@@ -395,3 +395,118 @@ body {
     text-align: center;
   }
 }
+
+/* === 9. Footer con tres columnas === */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fbe8d3;
+  padding: 2rem;
+  color: #5a3e2b;
+  text-align: center;
+  border-top: 2px solid #d8b08c;
+}
+
+.footer__columna {
+  flex: 1 1 200px;
+  margin: 1rem;
+}
+
+.footer__titulo {
+  font-size: 1.2rem;
+  color: #a0522d;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* === 10. Sección de precios con tarjetas horizontales === */
+.precios {
+  padding: 3rem 2rem;
+  background-color: rgba(255, 248, 240, 0.9);
+  text-align: center;
+}
+
+.precios__titulo {
+  font-size: 1.8rem;
+  color: #a0522d;
+  margin-bottom: 2rem;
+}
+
+.precios__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.precio__card {
+  background-color: #fbe8d3;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 200px;
+  flex: 1 1 180px;
+  text-align: left;
+}
+
+.precio__nombre {
+  font-size: 1.2rem;
+  color: #a0522d;
+  margin-bottom: 0.5rem;
+}
+
+.precio__descripcion {
+  font-size: 0.95rem;
+  color: #5a3e2b;
+  margin-bottom: 0.5rem;
+}
+
+.precio__valor {
+  font-weight: bold;
+  color: #d2691e;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .precio__card {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+/* === 11. Sidebar de navegación vertical === */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #fbe8d3;
+  padding: 1rem 0.5rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sidebar__item {
+  color: #a0522d;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar__item:hover {
+  color: #b34700;
+}

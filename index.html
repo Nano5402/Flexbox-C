@@ -9,7 +9,22 @@
 </head>
 <body>
 
+
   <main>
+    <aside class="sidebar">
+  <nav class="sidebar__menu">
+        <a href="#precios" class="sidebar__item" title="Platos más pedidos">
+      <i class='bx bx-food-menu'></i>
+    <a href="#tareas" class="sidebar__item" title="Lista de tareas">
+      <i class='bx bx-list-check'></i>
+    </a>
+        </a>
+    <a href="#testimonial" class="sidebar__item" title="Testimonial">
+      <i class='bx bx-user-voice'></i>
+    </a>
+  </nav>
+</aside>
+
     <!-- Barra de navegación -->
     <nav class="navbar navbar--light">
       <div class="navbar__start">
@@ -32,8 +47,38 @@
         </li>
       </ul>
     </nav>
+<section id="precios" class="precios">
+  <h2 class="precios__titulo">Platos más pedidos en Sabores de Girón.</h2>
+  <div class="precios__contenedor">
+    <div class="precio__card">
+      <h3 class="precio__nombre">Cabro con pepitoria</h3>
+      <p class="precio__descripcion">Carne de cabro cocinada lentamente con arroz y salsa de pepitoria.</p>
+      <p class="precio__valor">$22.000</p>
+    </div>
+    <div class="precio__card">
+      <h3 class="precio__nombre">Fritanga santandereana</h3>
+      <p class="precio__descripcion">Una deliciosa base de papa amarilla con chorizo, rellena, chicharron, capón y deliciosa carne de cerdo 100% colombiana.</p>
+      <p class="precio__valor">$20.000</p>
+    </div>
+    <div class="precio__card">
+      <h3 class="precio__nombre">Carne oreada</h3>
+      <p class="precio__descripcion">Carne marinada y secada al sol, luego asada al estilo tradicional.</p>
+      <p class="precio__valor">$18.000</p>
+    </div>
+    <div class="precio__card">
+  <h3 class="precio__nombre">Migao</h3>
+  <p class="precio__descripcion">Postre caliente con chocolate espeso, queso, almojábana, pan y galletas.</p>
+  <p class="precio__valor">$12.000</p>
+</div>
+    <div class="precio__card">
+      <h3 class="precio__nombre">Maracumix</h3>
+      <p class="precio__descripcion">Delicioso psotre a base de maracuya, servido en su propia cascara con helado de maracuya, leche condensada y una deliciosa mermelada de maracuya.</p>
+      <p class="precio__valor">$8.000</p>
+    </div>
+  </div>
+</section>
 
-<section class="tareas">
+<section id="tareas" class="tareas">
   <h2 class="tareas__titulo">Lista de tareas del proyecto Sabor Girones</h2>
   <ul class="tareas__lista">
     <li class="tareas__item">✔️ Crear estructura base del sitio</li>
@@ -41,10 +86,11 @@
     <li class="tareas__item">✔️ Integrar galería de imágenes</li>
     <li class="tareas__item">✔️ Construir formulario de contacto</li>
     <li class="tareas__item">✔️ Testimonial</li>
+    <li class="tareas__item">✔️ Footer 3 columnas</li>
   </ul>
 </section>
 
-<section class="testimonial">
+<section id="testimonial" class="testimonial">
   <div class="testimonial__contenido">
     <img src="avatar.jpg" alt="Foto de cliente" class="testimonial__avatar">
     <div class="testimonial__texto">
@@ -55,6 +101,23 @@
 </section>
 
   </main>
+<footer class="footer">
+  <div class="footer__columna">
+    <h3 class="footer__titulo">Horario</h3>
+    <p>Lunes a sábado: 12pm - 8pm</p>
+    <p>Domingos: 12pm - 4pm</p>
+  </div>
 
+  <div class="footer__columna">
+    <h3 class="footer__titulo">Ubicación</h3>
+    <p>Calle 44 #23-40, Poblado Girón.</p>
+    <p>Girón, Santander</p>
+  </div>
+
+  <div class="footer__columna">
+    <h3 class="footer__titulo">Síguenos</h3>
+    <p>Instagram: @Nano__0204</p>
+  </div>
+</footer>
 </body>
 </html>
