@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores de Girón</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <main>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar--light">
+      <div class="navbar__start">
+        <i class='bx bx-food-menu'></i>
+      </div>
+
+      <div class="navbar__center">
+      <a href="index.html" class="navbar__titulo">Sabores de Girón</a>
+      </div>
+
+      <ul class="navbar__menu navbar__menu--right">
+        <li class="navbar__item navbar__item--active">
+          <a class="navbar__link" href="card.html">Inicio</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link navbar__link--highlighted" href="servicios.html">Servicios</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+<!-- 📬 Formulario de contacto -->
+    <section class="contacto">
+      <h2 class="contacto__titulo">Contáctanos</h2>
+      <form class="contacto__formulario">
+        <div class="contacto__fila">
+          <div class="contacto__campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="contacto__campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="contacto__fila">
+          <div class="contacto__campo contacto__campo--full">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="contacto__boton">Enviar mensaje</button>
+      </form>
+
+    <!-- 📇 Datos de contacto -->
+        <div class="contacto__datos">
+           <h3 class="contacto__subtitulo">También puedes escribirnos directamente:</h3>
+           <p><strong>📧 Correo:</strong> santiagocalvete69@gmail.com</p>
+           <p><strong>📞 Teléfono:</strong> +57 317 419 5112</p>
+        </div>
+
+    </section>
+  </main>
+  </main>
+
+</body>
+</html>
