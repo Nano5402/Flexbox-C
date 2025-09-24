@@ -134,6 +134,8 @@ body {
   display: flex;
   justify-content: center;
   background-color: rgba(255, 248, 240, 0.9);
+  padding-bottom: 6rem;
+  padding-top: 2rem;
 }
 
 .producto__card {
@@ -185,6 +187,8 @@ body {
   padding: 3rem 2rem;
   background-color: rgba(255, 248, 240, 0.9);
   text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
 }
 
 .galeria__titulo {
@@ -198,6 +202,8 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
 }
 
 .galeria__imagen {
