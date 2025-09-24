@@ -1,23 +1,23 @@
-/* Fondo general del sitio con imagen y transparencia */
+/* === 1. Estilos base === */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Que el body ocupe toda la pantalla */
+  min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #5a3e2b;
-
-  /* Imagen de fondo */
   background-image: url('#'); /* Cambia esto por tu imagen real */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* Capa de color encima con transparencia */
   background-color: rgba(255, 248, 240, 0.85);
   background-blend-mode: overlay;
 }
 
-/* Barra de navegación */
+/* === 2. Barra de navegación === */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -30,12 +30,10 @@ body {
   position: relative;
 }
 
-/* Versión clara */
 .navbar--light {
   color: #5a3e2b;
 }
 
-/* Ícono del menú */
 .navbar__start {
   flex: 0 0 auto;
   display: flex;
@@ -48,8 +46,7 @@ body {
   color: #a0522d;
 }
 
-/* Nombre centrado */
-.navbar__center{
+.navbar__center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -59,19 +56,18 @@ body {
   text-align: center;
 }
 
-.navbar__titulo{
+.navbar__titulo {
   font-size: 2rem;
   font-weight: bold;
   color: #a0522d;
   text-decoration: none;
-  transition: color 0.3 ease;
+  transition: color 0.3s ease;
 }
 
-.navbar__titulo:hover{
+.navbar__titulo:hover {
   color: #b34700;
 }
 
-/* Menú de navegación */
 .navbar__menu {
   display: flex;
   gap: 1.5rem;
@@ -88,7 +84,6 @@ body {
   border-bottom-color: #a0522d;
 }
 
-/* Enlaces del menú */
 .navbar__link {
   text-decoration: none;
   color: #5a3e2b;
@@ -108,7 +103,118 @@ body {
   border-bottom-color: #b34700;
 }
 
-/* 📬 Sección de contacto */
+/* === 3. Encabezado de sección === */
+.encabezado {
+  padding: 2rem 2rem;
+  background-color: rgba(255, 248, 240, 0.9);
+}
+
+.encabezado__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.encabezado__contenido i {
+  font-size: 2rem;
+  color: #d2691e;
+}
+
+.encabezado__titulo {
+  font-size: 1.8rem;
+  color: #a0522d;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* === 4. Tarjeta de producto === */
+.producto {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 248, 240, 0.9);
+}
+
+.producto__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  background-color: #fbe8d3;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.producto__imagen {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.producto__titulo {
+  font-size: 1.5rem;
+  color: #a0522d;
+  margin-bottom: 0.5rem;
+}
+
+.producto__texto {
+  font-size: 1rem;
+  color: #5a3e2b;
+  margin-bottom: 1rem;
+}
+
+.producto__boton {
+  background-color: #d2691e;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto__boton:hover {
+  background-color: #b34700;
+}
+
+/* === 5. Galería de imágenes === */
+.galeria {
+  padding: 3rem 2rem;
+  background-color: rgba(255, 248, 240, 0.9);
+  text-align: center;
+}
+
+.galeria__titulo {
+  font-size: 1.8rem;
+  color: #a0522d;
+  margin-bottom: 2rem;
+}
+
+.galeria__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.galeria__imagen {
+  width: calc(40% - 1rem);
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .galeria__imagen {
+    width: 100%;
+  }
+}
+
+/* === 6. Formulario de contacto === */
 .contacto {
   padding: 3rem 2rem;
   background-color: rgba(255, 248, 240, 0.9);
@@ -121,7 +227,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* 🧱 Formulario */
 .contacto__formulario {
   max-width: 700px;
   margin: 0 auto;
@@ -130,14 +235,12 @@ body {
   gap: 1.5rem;
 }
 
-/* 🧩 Fila con dos columnas */
 .contacto__fila {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* 🧾 Campo individual */
 .contacto__campo {
   flex: 1;
   display: flex;
@@ -162,12 +265,10 @@ body {
   color: #5a3e2b;
 }
 
-/* 🧱 Campo que ocupa toda la fila */
 .contacto__campo--full {
   flex: 1 1 100%;
 }
 
-/* 🔘 Botón de envío */
 .contacto__boton {
   background-color: #d2691e;
   color: #fff;
@@ -183,129 +284,7 @@ body {
   background-color: #b34700;
 }
 
-/* 🍽️ Encabezado de sección con ícono y texto */
-.encabezado {
-  padding: 2rem 2rem 2rem;
-  background-color: rgba(255, 248, 240, 0.9);
-}
-
-.encabezado__contenido {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centrado horizontal */
-  gap: 1rem; /* Espacio entre ícono y texto */
-}
-
-.encabezado__contenido i {
-  font-size: 2rem;
-  color: #d2691e; /* Naranja tostado */
-}
-
-.encabezado__titulo {
-  font-size: 1.8rem;
-  color: #a0522d;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Sección del producto */
-.producto {
-  padding: 0 2rem;
-  display: flex;
-  justify-content: center;
-  background-color: rgba(255, 248, 240, 0.9);
-}
-
-/* Tarjeta del producto */
-.producto__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 320px;
-  background-color: #fbe8d3;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: center;
-}
-
-/* Imagen del producto */
-.producto__imagen {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-/* Descripción */
-.producto__titulo {
-  font-size: 1.5rem;
-  color: #a0522d;
-  margin-bottom: 0.5rem;
-}
-
-.producto__texto {
-  font-size: 1rem;
-  color: #5a3e2b;
-  margin-bottom: 1rem;
-}
-
-/* Botón */
-.producto__boton {
-  background-color: #d2691e;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.producto__boton:hover {
-  background-color: #b34700;
-}
-
-/* Scroll suave al hacer clic en enlaces */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Sección de galería */
-.galeria {
-  padding: 3rem 2rem;
-  background-color: rgba(255, 248, 240, 0.9);
-  text-align: center;
-}
-
-.galeria__titulo {
-  font-size: 1.8rem;
-  color: #a0522d;
-  margin-bottom: 2rem;
-}
-
-/* Contenedor flexible */
-.galeria__contenedor {
-  display: flex;
-  flex-wrap: wrap; /* Que las imágenes se acomoden en varias filas si es necesario */
-  gap: 1rem; /* Menos espacio entre ellas para que se vea más compacto */
-  justify-content: center;
-}
-
-/* Imágenes individuales */
-.galeria__imagen {
-  width: calc(40% - 1rem); /* Más pequeñas pero siguen en dos columnas */
-  max-width: 280px; /* Límite para que no se estiren demasiado */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-}
-
-@media (max-width: 600px) {
-  .galeria__imagen {
-    width: 100%; /* Una imagen por fila en celulares */
-  }
-}
-
-/* 📇 Datos de contacto personales */
+/* Datos de contacto personales */
 .contacto__datos {
   margin-top: 2rem;
   background-color: #fbe8d3;
@@ -323,4 +302,96 @@ html {
   font-size: 1.2rem;
   color: #a0522d;
   margin-bottom: 1rem;
+}
+
+/* === 7. Lista de tareas === */
+.tareas {
+  padding: 3rem 2rem;
+  background-color: rgba(255, 248, 240, 0.9);
+  text-align: center;
+}
+
+.tareas__titulo {
+  font-size: 1.8rem;
+  color: #a0522d;
+  margin-bottom: 2rem;
+}
+
+.tareas__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tareas__item {
+  background-color: #fbe8d3;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #5a3e2b;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* === 8. Testimonial con avatar y texto === */
+.testimonial {
+  padding: 3rem 2rem;
+  background-color: rgba(255, 248, 240, 0.9);
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial__contenido {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 700px;
+  background-color: #fbe8d3;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial__texto {
+  flex: 1;
+  text-align: left;
+}
+
+.testimonial__comentario {
+  font-size: 1rem;
+  color: #5a3e2b;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.testimonial__autor {
+  font-size: 0.9rem;
+  color: #a0522d;
+  font-weight: 500;
+}
+
+/* 📱 Responsive para testimonial */
+@media (max-width: 600px) {
+  .testimonial__contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial__texto {
+    text-align: center;
+  }
 }
